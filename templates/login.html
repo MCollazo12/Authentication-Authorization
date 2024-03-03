@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block title %}User Login{% endblock %}
+
+{% block content %}
+<h3 class="mt-2">Log in</h3>
+
+<form action="/login" method="POST">
+  {{ form.hidden_tag() }}
+
+  {% for field in form if field.name != 'csrf_token' %}
+  <div class="mb-3">
+    <label for="{{ field.id }}" class="form-label">{{field.label}}</label>
+    {% if field.type == 'password' %} 
+      {{ field(class="form-control", id=field.id, type="password") }} 
+    {% else %} 
+      {{ field(class="form-control", id=field.id) }} 
+    {% endif %} 
+  </div>
+  {% endfor %}
+
+  <a href="/" class="btn btn-secondary">Back</a>
+  <input type="submit" class="btn btn-primary"></input>
+</form>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+.error {
+        background-color: rgb(255, 102, 102);
+        padding: 10px;
+        border-radius: 10px;
+}
+
+.success { 
+        background-color: rgb(95, 212, 84);
+        padding: 10px;
+        border-radius: 10px;
+}
+
+#flashes {
+    font-size: 1.1rem;
+    color: rgb(59, 59, 59);
+    height: 50px;
+    width: 50%;    
+}
+
